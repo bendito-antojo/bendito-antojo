@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bendito Antojo | Hamburguesas, alitas y crepas en El Pueblito, Querétaro</title>
+<meta name="description" content="Bendito Antojo: hamburguesas, boneless, alitas, huaraches, crepas, café y frappés en El Pueblito, Corregidora, Querétaro. Alameda Hidalgo 16. Peca poquito y come delicioso.">
+<meta name="keywords" content="hamburguesas El Pueblito, restaurante El Pueblito Querétaro, crepas El Pueblito, alitas Corregidora, huaraches El Pueblito, Bendito Antojo">
+<link rel="canonical" href="https://TU-USUARIO.github.io/">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Bendito Antojo | El Pueblito, Querétaro">
+<meta property="og:description" content="Peca poquito y come delicioso. Hamburguesas, alitas, huaraches, crepas y café.">
+<meta property="og:image" content="IMG_0343.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Bendito Antojo","servesCuisine":["Hamburguesas","Mexicana","Postres"],
+"address":{"@type":"PostalAddress","streetAddress":"Alameda Hidalgo 16","postalCode":"76900","addressLocality":"El Pueblito","addressRegion":"Querétaro","addressCountry":"MX"},
+"openingHours":"Mo-Su 11:00-21:00",
+"hasMap":"https://maps.app.goo.gl/svyeuc2PKffgZReQ9?g_st=ic"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== Colores de marca (tomados de los menús; ajústalos aquí) ===== */
+:root{
+  --primary-color:#e8822c;   /* naranja de los títulos */
+  --primary-dark:#b9611a;    /* naranja oscuro para texto sobre claro */
+  --accent-color:#f4b942;    /* amarillo del letrero */
+  --chalk:#171412;           /* negro pizarrón */
+  --chalk-2:#221d19;
+  --cream:#fbf5ea;
+  --ink:#241c15;
+  --muted:#6b5d50;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:'Nunito Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--primary-dark)}
+h1,h2,h3{font-family:'Kaushan Script',cursive;font-weight:400;line-height:1.2}
+h2{font-size:clamp(2.1rem,6vw,3rem);color:var(--primary-dark);margin-bottom:.5rem}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.lead{color:var(--muted);max-width:60ch;margin-bottom:1.8rem}
+:focus-visible{outline:3px solid var(--accent-color);outline-offset:3px}
+
+header.nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(23,20,18,.95);backdrop-filter:blur(8px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:'Kaushan Script',cursive;font-size:1.6rem;text-decoration:none;color:var(--primary-color)}
+.menu{display:flex;gap:26px;list-style:none;padding:0}
+.menu a{text-decoration:none;font-weight:600;font-size:.95rem;color:#f3e9d9}
+.menu a:hover{color:var(--accent-color)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;height:3px;width:24px;margin:5px auto;background:var(--primary-color);border-radius:2px;transition:.25s}
+@media(max-width:760px){
+  .burger{display:block}
+  .menu{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--chalk);max-height:0;overflow:hidden;transition:max-height .3s}
+  .menu.open{max-height:340px}
+  .menu a{display:block;padding:14px 22px}
+  .burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+}
+
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;padding:0;background:#2a1c10 url(IMG_0343.jpg) center/cover}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,10,6,.92) 10%,rgba(15,10,6,.45) 60%,rgba(15,10,6,.55))}
+.hero .wrap{position:relative;padding:120px 20px 64px}
+.hero h1{font-size:clamp(3.2rem,12vw,6.5rem);color:#fff;text-shadow:0 3px 18px rgba(0,0,0,.5)}
+.hero h1 em{font-style:normal;color:var(--primary-color)}
+.hero .sub{letter-spacing:.14em;text-transform:uppercase;font-size:.85rem;font-weight:700;color:var(--accent-color);margin:.2rem 0 .8rem}
+.hero .tag{font-family:'Kaushan Script',cursive;font-size:clamp(1.4rem,4vw,2rem);margin-bottom:1.6rem}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;background:var(--primary-color);color:#1b1108;font-weight:700;text-decoration:none;border:2px solid var(--primary-color);transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:#f39a4a}
+.btn.ghost{background:transparent;color:#fff;border-color:#fff;margin-left:8px}
+.btn.ghost:hover{background:rgba(255,255,255,.15)}
+
+.about .wrap{display:grid;gap:40px;grid-template-columns:1.3fr 1fr;align-items:center}
+.about img{border-radius:var(--radius);aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.about ul{list-style:none;padding:0;display:grid;gap:10px;margin-top:1.4rem}
+.about li{padding:12px 16px;background:#fff;border-left:5px solid var(--primary-color);border-radius:8px}
+.about li strong{display:block;color:var(--primary-dark)}
+@media(max-width:760px){.about .wrap{grid-template-columns:1fr}}
+
+.carta{background:var(--chalk);color:#f3e9d9}
+.carta h2{color:#fff}.carta h2 em{font-style:normal;color:var(--primary-color)}
+.carta .lead{color:#cbbba5}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.tabs button{font:700 1rem 'Nunito Sans',sans-serif;padding:11px 22px;border-radius:999px;border:2px solid var(--primary-color);background:transparent;color:var(--primary-color);cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--primary-color);color:#1b1108}
+.panel{display:none;gap:18px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.panel.on{display:grid}
+.box{background:var(--chalk-2);border:1px solid #3a322b;border-radius:var(--radius);padding:20px}
+.box h3{color:var(--primary-color);font-size:1.7rem;margin-bottom:.3rem}
+.box small{display:block;color:#b8a891;font-size:.85rem;margin-bottom:.6rem}
+.box ul{list-style:none;padding:0}
+.box li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-bottom:1px dashed #3a322b;font-size:.97rem}
+.box li:last-child{border:0}
+.box b{color:var(--accent-color);white-space:nowrap}
+.box p{font-size:.92rem;color:#d9cab4}
+.step b{color:var(--accent-color)}
+.note{font-size:.88rem;color:#b8a891;margin-top:1.4rem}
+
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.grid figure{border-radius:var(--radius);overflow:hidden;cursor:zoom-in;aspect-ratio:1;background:#e9dfcd}
+.grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.grid figure:hover img{transform:scale(1.06)}
+.lb{position:fixed;inset:0;background:rgba(10,8,6,.94);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+.lb.open{display:flex}
+.lb img{max-height:88vh;border-radius:8px}
+.lb button{position:absolute;background:none;border:0;color:#fff;font-size:2.4rem;cursor:pointer;width:52px;height:52px}
+.lb .x{top:10px;right:10px}.lb .p{left:6px}.lb .n{right:6px}
+
+.loc{display:grid;gap:28px;grid-template-columns:1fr 1.4fr;align-items:start}
+@media(max-width:760px){.loc{grid-template-columns:1fr}}
+.map{border:0;width:100%;height:380px;border-radius:var(--radius);background:#e9dfcd}
+.hours{list-style:none;padding:0;margin:0 0 1.2rem;color:var(--muted)}
+.hours li{display:flex;justify-content:space-between;gap:16px;max-width:340px;border-bottom:1px dashed #d7c8b0;padding:4px 0}
+.contact{background:var(--primary-dark);color:#fff;text-align:center}
+.contact h2{color:#fff}
+.contact p{max-width:52ch;margin:0 auto 1.4rem;color:#ffe9d2}
+.contact .btn{background:#fff;border-color:#fff;color:#7a3f0e}
+footer{padding:22px;text-align:center;font-size:.85rem;color:#b8a891;background:var(--chalk)}
+
+.wa{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;font-weight:700;text-decoration:none;padding:13px 18px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.wa svg{width:26px;height:26px;fill:#fff}
+@media(max-width:480px){.wa span{display:none}.wa{padding:14px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio">Bendito Antojo</a>
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="menu">
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#menu">Menú</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <h1>Bendito <em>Antojo</em></h1>
+    <p class="sub">Hamburguesas · Alitas · Huaraches · Crepas · Café</p>
+    <p class="tag">Peca poquito y come delicioso.</p>
+    <a class="btn" href="#menu">Ver menú</a>
+    <a class="btn ghost" href="#ubicacion">Cómo llegar</a>
+  </div>
+</section>
+
+<section class="about" id="nosotros">
+  <div class="wrap">
+    <div>
+      <h2>Cada antojo merece su momento</h2>
+      <p class="lead" style="margin-bottom:0">En el corazón de El Pueblito, junto al jardín, te esperamos con hamburguesas jugosas, boneless y alitas con tus salsas favoritas, huaraches, y un menú dulce con crepas, bubble waffles, frappés y café. Un lugar sencillo y familiar, atendido directamente por sus dueños.</p>
+      <ul>
+        <li><strong>Salado</strong>Hamburguesas, hot dogs, boneless, alitas y huaraches.</li>
+        <li><strong>Dulce</strong>Arma tu crepa, mini hot cakes, frappés, smoothies y más.</li>
+        <li><strong>Junto al jardín</strong>Disfruta tu antojo en un entorno tranquilo.</li>
+      </ul>
+    </div>
+    <img src="IMG_0349.jpg" alt="Los dueños de Bendito Antojo con sus mandiles de hamburguesa" loading="lazy">
+  </div>
+</section>
+
+<section class="carta" id="menu">
+  <div class="wrap">
+    <h2>Nuestro <em>menú</em></h2>
+    <p class="lead">Precios en pesos mexicanos (MXN).</p>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-t="s">Antojo Salado</button>
+      <button role="tab" aria-selected="false" data-t="d">Antojo Dulce</button>
+      <button role="tab" aria-selected="false" data-t="c">Arma tu crepa</button>
+    </div>
+
+    <!-- SALADO -->
+    <div class="panel on" id="p-s" role="tabpanel">
+      <div class="box"><h3>Hamburguesas</h3><small>Todas llevan lechuga, cebolla, catsup, mostaza y mayonesa.</small><ul>
+        <li>Sencilla<b>$85</b></li><li>BBQ<b>$85</b></li><li>Hawaiana<b>$95</b></li><li>Tocino<b>$95</b></li><li>Doble<b>$145</b></li><li>Especial<b>$165</b></li></ul></div>
+      <div class="box"><h3>Combos</h3><small>Con papas y refresco.</small><ul>
+        <li>Hamburguesa sencilla<b>$150</b></li><li>Hamburguesa hawaiana<b>$175</b></li><li>Hamburguesa doble<b>$210</b></li></ul></div>
+      <div class="box"><h3>Hot dogs</h3><small>Lechuga, cebolla, catsup, mostaza y mayonesa.</small><ul>
+        <li>Hot dog sencillo<b>$50</b></li><li>Hot dog tocino<b>$65</b></li></ul></div>
+      <div class="box"><h3>Boneless</h3><small>Servidos con papas y verdura.</small><ul>
+        <li>6 piezas<b>$130</b></li><li>10 piezas<b>$180</b></li><li>16 piezas<b>$220</b></li></ul></div>
+      <div class="box"><h3>Alitas</h3><small>Servidas con verdura.</small><ul>
+        <li>6 alitas<b>$130</b></li><li>12 alitas<b>$220</b></li><li>20 alitas<b>$330</b></li></ul></div>
+      <div class="box"><h3>Snacks</h3><ul>
+        <li>5 dedos de queso<b>$70</b></li><li>10 dedos de queso<b>$120</b></li></ul></div>
+      <div class="box"><h3>Huaraches</h3><small>Con salsa verde o roja, cebolla y queso.</small><ul>
+        <li>Sencillo<b>$45</b></li><li>Campechano<b>$100</b></li><li>Chorizo<b>$85</b></li><li>Bistec<b>$85</b></li><li>Costilla<b>$95</b></li><li>Sepecitas<b>$45</b></li></ul></div>
+      <div class="box"><h3>Bebidas</h3><ul><li>Refrescos<b>$30</b></li><li>Aguas litro<b>$40</b></li></ul></div>
+    </div>
+
+    <!-- DULCE -->
+    <div class="panel" id="p-d" role="tabpanel">
+      <div class="box"><h3>Café</h3><small>Caliente / Frío</small><ul>
+        <li>Espresso<b>$40</b></li><li>Espresso doble<b>$50</b></li><li>Espresso Sweet<b>$58</b></li><li>Americano<b>$50 / $55</b></li><li>Cappuccino<b>$65 / $70</b></li><li>Latte<b>$70 / $75</b></li><li>Moka Oscuro<b>$75 / $80</b></li><li>Moka Blanco<b>$80 / $85</b></li><li>Dark Latte<b>$80 / $80</b></li>
+        <li>Oreo Ice Latte<b>Frío $85</b></li><li>Caramel Ice Latte<b>Frío $85</b></li><li>Mazapán Ice Latte<b>Frío $85</b></li><li>Cajeta Ice Latte<b>Frío $85</b></li></ul></div>
+      <div class="box"><h3>Sin café</h3><small>Caliente / Frío</small><ul>
+        <li>Matcha<b>$75 / $80</b></li><li>Taro<b>$75 / $80</b></li><li>Chocolate Oscuro<b>$65 / $70</b></li><li>Chocolate Blanco<b>$70 / $75</b></li><li>Chai<b>$70 / $75</b></li></ul></div>
+      <div class="box"><h3>Frappés con café</h3><small>Todos incluyen crema batida.</small><ul>
+        <li>Espresso Sweet<b>$73</b></li><li>Cappuccino<b>$78</b></li><li>Moka Oscuro<b>$80</b></li><li>Moka Blanco<b>$85</b></li><li>Caramelo<b>$88</b></li><li>Maní<b>$88</b></li><li>Mazapán<b>$85</b></li></ul></div>
+      <div class="box"><h3>Frappés sin café</h3><small>Todos incluyen crema batida.</small><ul>
+        <li>Matcha<b>$85</b></li><li>Taro<b>$85</b></li><li>Chai<b>$85</b></li><li>Chocolate Oscuro<b>$75</b></li><li>Chocolate Blanco<b>$80</b></li><li>Chocomenta<b>$80</b></li><li>Oreo<b>$80</b></li></ul></div>
+      <div class="box"><h3>Smoothies · $68</h3><p>Mango, Maracuyá, Frutos rojos, Limón, Mandarina.</p></div>
+      <div class="box"><h3>Chamoyadas · $75</h3><p>Mango, Maracuyá, Frutos rojos, Limón, Mandarina.</p></div>
+      <div class="box"><h3>Sodas italianas · $65</h3><p>Manzana verde, Fresa, Dragon fruit.</p></div>
+      <div class="box"><h3>Malteadas · $65</h3><p>Chocolate, Vainilla, Fresa, Oreo.</p></div>
+      <div class="box"><h3>Postres</h3><ul>
+        <li>Crepa<b>desde $75</b></li><li>Bubble waffles<b>desde $80</b></li><li>Mini hot cakes<b>desde $70</b></li><li>Flan<b>$45</b></li><li>Panqué de elote<b>$40</b></li><li>Cheesecake<b>$50</b></li><li>Fresas con crema<b>$75</b></li></ul></div>
+    </div>
+
+    <!-- ARMA TU CREPA -->
+    <div class="panel" id="p-c" role="tabpanel">
+      <div class="box"><h3>Elige tu combinación</h3><small>Crepas y mini hot cakes al mismo costo. Bubble waffles $5 más por combinación.</small><ul>
+        <li>1 untable + 1 topping<b>$75</b></li><li>1 untable + 1 fruta<b>$85</b></li><li>1 untable + 1 fruta + 1 topping<b>$90</b></li><li>1 untable + 1 fruta + 1 topping + 1 helado<b>$105</b></li></ul></div>
+      <div class="box"><h3>Untables</h3><p>Cajeta, Nutella, Lechera, Crema de maní, Philadelphia, Mermelada de zarzamora, Mermelada de fresa, Chocolate Hersheys.</p></div>
+      <div class="box"><h3>Toppings</h3><p>Granillo de chocolate, Chechis de colores, Oreo, Chokrispis, Nuez, Almendra fileteada, Mazapán, Krankis, Lunetas, Chocoretas, Cacahuate, Copos de chocolate, Granola, Crema batida.</p></div>
+      <div class="box"><h3>Frutas</h3><p>Fresa, Plátano, Mango, Durazno.</p></div>
+      <div class="box"><h3>Helados</h3><p>Fresa, Vainilla, Chocolate, Oreo.</p></div>
+    </div>
+    <p class="note">Precios y platillos sujetos a cambio. Confirma disponibilidad por WhatsApp.</p>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <h2>Galería</h2>
+    <p class="lead">Un vistazo a nuestros antojos y a El Pueblito. Toca una foto para verla en grande.</p>
+    <div class="grid">
+      <figure><img src="IMG_0343.jpg" alt="Hamburguesa con papas con salsa" loading="lazy"></figure>
+      <figure><img src="IMG_0344.jpg" alt="Hamburguesa armándose en el asador" loading="lazy"></figure>
+      <figure><img src="IMG_0352.jpg" alt="Boneless BBQ con papas y pepino" loading="lazy"></figure>
+      <figure><img src="IMG_0348.jpg" alt="Boneless con aderezo ranch y papas" loading="lazy"></figure>
+      <figure><img src="IMG_0346.jpg" alt="Boneless con papas con queso" loading="lazy"></figure>
+      <figure><img src="IMG_0345.jpg" alt="Huarache con chorizo, bistec y queso" loading="lazy"></figure>
+      <figure><img src="IMG_0347.jpg" alt="Crepa con lechera y galleta Oreo" loading="lazy"></figure>
+      <figure><img src="IMG_0350.jpg" alt="Fachada de Bendito Antojo" loading="lazy"></figure>
+      <figure><img src="IMG_0357.jpg" alt="Fuente del jardín de El Pueblito" loading="lazy"></figure>
+      <figure><img src="IMG_0358.jpg" alt="Letras coloridas de El Pueblito" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="ubicacion" style="background:#f3e9d6">
+  <div class="wrap loc">
+    <div>
+      <h2>Visítanos</h2>
+      <address style="font-style:normal;color:var(--muted);margin-bottom:1.2rem">Alameda Hidalgo 16<br>El Pueblito, Corregidora<br>Querétaro, México, 76900</address>
+      <!-- EDITA LOS HORARIOS AQUÍ -->
+      <ul class="hours">
+        <li><span>Lunes a domingo</span><span>11:00 a.m. – 9:00 p.m.</span></li>
+      </ul>
+      <a class="btn" href="https://maps.app.goo.gl/svyeuc2PKffgZReQ9?g_st=ic" target="_blank" rel="noopener">Abrir en Google Maps</a>
+    </div>
+    <iframe class="map" title="Mapa de Bendito Antojo" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=Alameda+Hidalgo+16,+El+Pueblito,+Quer%C3%A9taro,+Mexico,+76900&output=embed"></iframe>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <h2>¿Se te antojó?</h2>
+    <p>Escríbenos por WhatsApp para hacer tu pedido o preguntar por nuestros antojos del día.</p>
+    <!-- CAMBIA 52XXXXXXXXXX por tu número: 52 + 10 dígitos, sin espacios -->
+    <a class="btn" href="https://wa.me/52XXXXXXXXXX?text=Hola,%20quiero%20hacer%20un%20pedido%20en%20Bendito%20Antojo.">Pedir por WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="yr"></span> Bendito Antojo · Alameda Hidalgo 16, El Pueblito, Querétaro</footer>
+
+<a class="wa" href="https://wa.me/52XXXXXXXXXX?text=Hola,%20quiero%20hacer%20un%20pedido%20en%20Bendito%20Antojo." aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.400 1.700 6.300L3 29l7.400-1.900c1.800 1 3.800 1.500 5.600 1.500 7 0 12.600-5.600 12.600-12.500S23 3 16 3zm0 22.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-4.400 1.100 1.200-4.300-.3-.4a10 10 0 0 1-1.500-5.300C5.600 9.900 10.300 5.300 16 5.300s10.400 4.600 10.400 10.200S21.700 25.800 16 25.800zm5.700-7.500c-.3-.2-1.800-.9-2.100-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.2-1.300-.5-2.500-1.500-.9-.8-1.500-1.800-1.700-2.100-.2-.3 0-.5.100-.6l.5-.5c.1-.2.200-.3.300-.5.100-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1.100 1-1.100 2.600s1.100 3 1.300 3.200c.2.200 2.200 3.400 5.400 4.700.8.300 1.400.5 1.800.6.800.2 1.500.2 2 .1.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.2-.3-.3-.6-.4z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<div class="lb" role="dialog" aria-modal="true" aria-label="Galería ampliada">
+  <button class="x" aria-label="Cerrar">&times;</button>
+  <button class="p" aria-label="Anterior">&#8249;</button>
+  <img alt="">
+  <button class="n" aria-label="Siguiente">&#8250;</button>
+</div>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.querySelector('.menu');
+  function closeMenu(){m.classList.remove('open');b.classList.remove('open');b.setAttribute('aria-expanded','false')}
+  b.addEventListener('click',function(){var o=m.classList.toggle('open');b.classList.toggle('open',o);b.setAttribute('aria-expanded',o)});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')closeMenu()});
+
+  // Pestañas del menú
+  var tabs=document.querySelectorAll('.tabs button'),panels=document.querySelectorAll('.panel');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
+    panels.forEach(function(p){p.classList.toggle('on',p.id==='p-'+t.dataset.t)});
+  })});
+
+  // Lightbox
+  var lb=document.querySelector('.lb'),lbi=lb.querySelector('img'),idx=0;
+  function imgs(){return Array.prototype.slice.call(document.querySelectorAll('.grid img'))}
+  function show(i){var l=imgs();idx=(i+l.length)%l.length;lbi.src=l[idx].src;lbi.alt=l[idx].alt;lb.classList.add('open')}
+  function hide(){lb.classList.remove('open')}
+  document.querySelector('.grid').addEventListener('click',function(e){var i=imgs().indexOf(e.target);if(i>-1)show(i)});
+  lb.querySelector('.x').onclick=hide;
+  lb.querySelector('.p').onclick=function(){show(idx-1)};
+  lb.querySelector('.n').onclick=function(){show(idx+1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)hide()});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')hide();
+    if(e.key==='ArrowLeft')show(idx-1);
+    if(e.key==='ArrowRight')show(idx+1);
+  });
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
